@@ -1,17 +1,15 @@
 {
   "name": "clean-react",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "NodeJs Rest API using TDD, Clean Architecture and Typescript",
+  "author": "Rodrigo Manguinho",
+  "license": "GNU GPL3",
   "scripts": {
     "test": "jest --passWithNoTests",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/faker": "^4.1.11",
