@@ -63,6 +63,7 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Typescript
 * Git
 * Jest
+* Cypress
 * Axios
 * Webpack
 * SASS
