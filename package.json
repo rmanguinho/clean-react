@@ -11,9 +11,11 @@
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
     "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info",
+    "test:cypress": "cypress open",
     "check": "npm-check -u -s"
   },
   "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.4.1",
     "@testing-library/react": "^10.0.4",
     "@types/axios": "^0.14.0",
     "@types/faker": "^4.1.12",
@@ -26,8 +28,10 @@
     "clean-webpack-plugin": "^3.0.0",
     "coveralls": "^3.1.0",
     "css-loader": "^3.5.3",
+    "cypress": "^4.6.0",
     "eslint": "^7.0.0",
     "eslint-config-standard-with-typescript": "^16.0.0",
+    "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
