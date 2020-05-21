@@ -81,6 +81,23 @@ describe('Login', () => {
     cy.url().should('eq', `${baseUrl}/login`)
   })
 
+  it('Should present UnexpectedError if invalid data is returned', () => {
+    cy.route({
+      method: 'POST',
+      url: /login/,
+      status: 200,
+      response: {
+        invalidProperty: faker.random.uuid()
+      }
+    })
+    cy.getByTestId('email').focus().type(faker.internet.email())
+    cy.getByTestId('password').focus().type(faker.random.alphaNumeric(5))
+    cy.getByTestId('submit').click()
+    cy.getByTestId('spinner').should('not.exist')
+    cy.getByTestId('main-error').should('contain.text', 'Algo de errado aconteceu. Tente novamente em breve.')
+    cy.url().should('eq', `${baseUrl}/login`)
+  })
+
   it('Should present save accessToken if valid credentials are provided', () => {
     cy.route({
       method: 'POST',
