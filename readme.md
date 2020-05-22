@@ -66,7 +66,7 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Cypress
 * Axios
 * Webpack
-* SASS
+* SASS + Animations
 * NPM
 * Travis CI
 * Faker
@@ -86,6 +86,7 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * UseContext
 * UseEffect
 * UseHistory
+* UseRef
 * Memo
 * Functional Components
 
