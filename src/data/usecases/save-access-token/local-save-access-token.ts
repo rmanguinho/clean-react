@@ -1,5 +1,5 @@
-import { SaveAccessToken } from '@/domain/usecases/save-access-token'
-import { SetStorage } from '@/data/protocols/cache/set-storage'
+import { SetStorage } from '@/data/protocols/cache'
+import { SaveAccessToken } from '@/domain/usecases'
 import { UnexpectedError } from '@/domain/errors'
 
 export class LocalSaveAccessToken implements SaveAccessToken {

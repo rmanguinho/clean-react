@@ -1,6 +1,5 @@
 import { makeSignUpValidation } from './signup-validation-factory'
-import { ValidationComposite } from '@/validation/validators'
-import { ValidationBuilder as Builder } from '@/validation/validators/builder/validation-builder'
+import { ValidationComposite, ValidationBuilder as Builder } from '@/validation/validators'
 
 describe('SignUpValidationFactory', () => {
   test('Should make ValidationComposite with correct validations', () => {

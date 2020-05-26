@@ -1,5 +1,4 @@
-import { ValidationComposite } from '@/validation/validators'
-import { ValidationBuilder as Builder } from '@/validation/validators/builder/validation-builder'
+import { ValidationComposite, ValidationBuilder as Builder } from '@/validation/validators'
 
 export const makeLoginValidation = (): ValidationComposite => {
   return ValidationComposite.build([
