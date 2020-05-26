@@ -13,6 +13,7 @@ export class RemoteLoadSurveyList implements LoadSurveyList {
     const httpResponse = await this.httpGetClient.get({ url: this.url })
     switch (httpResponse.statusCode) {
       case HttpStatusCode.ok: return httpResponse.body
+      case HttpStatusCode.noContent: return []
       default: throw new UnexpectedError()
     }
   }
