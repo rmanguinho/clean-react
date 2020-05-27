@@ -97,6 +97,25 @@
             linear-gradient(to right, $white, $white);
           background-position: 0 0, 54 0;
           background-size: 54px 100%, 100% 100%;
+          position: relative;
+
+          .iconWrap {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            padding: 10px;
+            border-radius: 100%;
+            display: flex;
+            box-shadow: 0px 1px 3px -1px $black;
+
+            &.red {
+              background-color: $invalid;
+            }
+
+            &.green {
+              background-color: $valid;
+            }
+          }
 
           time {
             display: flex;
