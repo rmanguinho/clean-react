@@ -43,3 +43,9 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .headerWrap {
+    border-top-width: 20px;
+  }
+}
