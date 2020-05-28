@@ -42,6 +42,7 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Abstract Server
 * Composition Root
 * Builder
+* Proxy
 
 > ## Metodologias e Designs
 
