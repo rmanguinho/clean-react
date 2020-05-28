@@ -1,7 +1,7 @@
 import { SetStorage } from '@/data/protocols/cache'
 
 export class LocalStorageAdapter implements SetStorage {
-  async set (key: string, value: any): Promise<void> {
+  set (key: string, value: any): void {
     localStorage.setItem(key, value)
   }
 }
