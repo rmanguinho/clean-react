@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-import { RouteProps, Route, Redirect } from 'react-router-dom'
 import { ApiContext } from '@/presentation/contexts'
+import { RouteProps, Route, Redirect } from 'react-router-dom'
+import React, { useContext } from 'react'
 
 const PrivateRoute: React.FC<RouteProps> = (props: RouteProps) => {
   const { getCurrentAccount } = useContext(ApiContext)

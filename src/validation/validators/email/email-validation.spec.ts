@@ -1,4 +1,4 @@
-import { EmailValidation } from './email-validation'
+import { EmailValidation } from '@/validation/validators'
 import { InvalidFieldError } from '@/validation/errors'
 import faker from 'faker'
 

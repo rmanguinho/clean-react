@@ -1,9 +1,9 @@
-import { setCurrentAccountAdapter, getCurrentAccountAdapter } from './current-account-adapter'
+import { setCurrentAccountAdapter, getCurrentAccountAdapter } from '@/main/adapters'
 import { mockAccountModel } from '@/domain/test'
-import { LocalStorageAdapter } from '@/infra/cache/local-storage-adapter'
 import { UnexpectedError } from '@/domain/errors'
+import { LocalStorageAdapter } from '@/infra/cache'
 
-jest.mock('@/infra/cache/local-storage-adapter')
+jest.mock('@/infra/cache/local-storage-adapter/local-storage-adapter')
 
 describe('CurrentAccountAdapter', () => {
   test('Should call LocalStorageAdapter.set with correct values', () => {

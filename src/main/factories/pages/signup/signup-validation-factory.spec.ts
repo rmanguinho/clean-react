@@ -1,4 +1,4 @@
-import { makeSignUpValidation } from './signup-validation-factory'
+import { makeSignUpValidation } from '@/main/factories/pages'
 import { ValidationComposite, ValidationBuilder as Builder } from '@/validation/validators'
 
 describe('SignUpValidationFactory', () => {

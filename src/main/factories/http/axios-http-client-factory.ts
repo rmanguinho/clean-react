@@ -1,4 +1,4 @@
-import { AxiosHttpClient } from '@/infra/http/axios-http-client/axios-http-client'
+import { AxiosHttpClient } from '@/infra/http'
 
 export const makeAxiosHttpClient = (): AxiosHttpClient => {
   return new AxiosHttpClient()

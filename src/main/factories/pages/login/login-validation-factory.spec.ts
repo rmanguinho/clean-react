@@ -1,4 +1,4 @@
-import { makeLoginValidation } from './login-validation-factory'
+import { makeLoginValidation } from '@/main/factories/pages'
 import { ValidationComposite, ValidationBuilder } from '@/validation/validators'
 
 describe('LoginValidationFactory', () => {

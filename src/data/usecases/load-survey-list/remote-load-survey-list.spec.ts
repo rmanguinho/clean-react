@@ -1,4 +1,4 @@
-import { RemoteLoadSurveyList } from './remote-load-survey-list'
+import { RemoteLoadSurveyList } from '@/data/usecases'
 import { HttpGetClientSpy } from '@/data/test'
 import { HttpStatusCode } from '@/data/protocols/http'
 import { UnexpectedError } from '@/domain/errors'

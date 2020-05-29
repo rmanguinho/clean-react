@@ -1,13 +1,14 @@
-import React from 'react'
-import { Router } from 'react-router-dom'
-import { createMemoryHistory } from 'history'
-import faker from 'faker'
-import { render, RenderResult, fireEvent, cleanup, waitFor } from '@testing-library/react'
 import { ApiContext } from '@/presentation/contexts'
 import { Login } from '@/presentation/pages'
-import { ValidationStub, AuthenticationSpy, Helper } from '@/presentation/test'
+import { ValidationStub, Helper } from '@/presentation/test'
 import { InvalidCredentialsError } from '@/domain/errors'
 import { AccountModel } from '@/domain/models'
+import { AuthenticationSpy } from '@/domain/test'
+import { Router } from 'react-router-dom'
+import { createMemoryHistory } from 'history'
+import { render, RenderResult, fireEvent, cleanup, waitFor } from '@testing-library/react'
+import React from 'react'
+import faker from 'faker'
 
 type SutTypes = {
   sut: RenderResult
