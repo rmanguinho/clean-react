@@ -23,22 +23,5 @@
       text-transform: uppercase;
       margin-bottom: 24px;
     }
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .surveyListWrap {
-    .contentWrap {
-      ul {
-        flex-direction: column;
-      }
-    }
   }
 }
