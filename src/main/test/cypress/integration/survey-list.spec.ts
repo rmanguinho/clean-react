@@ -19,6 +19,15 @@ describe('SurveyList', () => {
     cy.getByTestId('error').should('contain.text', 'Algo de errado aconteceu. Tente novamente em breve.')
   })
 
+  it('Should reload on button click', () => {
+    mockUnexpectedError()
+    cy.visit('')
+    cy.getByTestId('error').should('contain.text', 'Algo de errado aconteceu. Tente novamente em breve.')
+    mockSuccess()
+    cy.getByTestId('reload').click()
+    cy.get('li:not(:empty)').should('have.length', 2)
+  })
+
   it('Should logout on AccessDeniedError', () => {
     mockAccessDeniedError()
     cy.visit('')
