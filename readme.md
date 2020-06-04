@@ -61,20 +61,20 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 
 > ## Bibliotecas e Ferramentas
 
-* React
 * Typescript
-* Git
-* Jest
+* React
+* React Testing Library
+* React Router DOM
 * Cypress
+* Jest
 * Axios
+* Git
 * Webpack
 * SASS + Animations
 * NPM
 * Travis CI
 * Faker
 * Coveralls
-* React Hooks
-* React Router
 * Husky
 * Lint Staged
 * Eslint
@@ -82,16 +82,15 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 
 > ## Features do React
 
-* React Testing Library
-* React Router
+* Functional Components
 * UseState
 * UseContext
 * UseEffect
 * UseHistory
 * UseRef
 * Custom Hooks
+* Router
 * Memo
-* Functional Components
 
 > ## Features do Git
 
@@ -117,6 +116,8 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * POO Avançado
 * Interface
 * Type Alias
+* Namespace
+* Module
 * Utility Types
 * Modularização de Paths
 * Build
