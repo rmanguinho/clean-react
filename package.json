@@ -5,7 +5,8 @@
   "author": "Rodrigo Manguinho",
   "license": "GNU GPL3",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "test": "cross-env NODE_ICU_DATA=node_modules/full-icu jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
@@ -42,11 +43,13 @@
     "faker": "^4.1.0",
     "full-icu": "^1.3.1",
     "git-commit-msg-linter": "^2.4.2",
+    "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
     "jest-localstorage-mock": "^2.4.2",
     "lint-staged": "^10.2.7",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
@@ -55,7 +58,8 @@
     "typescript": "^3.9.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "axios": "^0.19.2",
