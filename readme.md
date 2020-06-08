@@ -89,6 +89,7 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * UseEffect
 * UseHistory
 * UseRef
+* UseParams
 * Custom Hooks
 * Router
 * Memo
