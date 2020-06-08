@@ -1,6 +1,6 @@
 {
   "hooks": {
     "pre-commit": "lint-staged",
-    "pre-push": "npm run test:ci"
+    "pre-push": "npm run test:ci && npm run test:cypress:ci"
   }
 }
