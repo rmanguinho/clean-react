@@ -6,6 +6,12 @@
   width: 80px;
   height: 13px;
 
+  &.negative {
+    div {
+      background: $white;
+    }
+  }
+
   div {
     position: absolute;
     top: 0px;
