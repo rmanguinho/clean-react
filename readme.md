@@ -80,6 +80,7 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Lint Staged
 * Eslint
 * Standard Javascript Style
+* React Flip Move
 
 > ## Features do React
 
