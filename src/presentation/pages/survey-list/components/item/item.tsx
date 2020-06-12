@@ -1,6 +1,6 @@
 import Styles from './item-styles.scss'
 import { LoadSurveyList } from '@/domain/usecases'
-import { IconName, Icon } from '@/presentation/components'
+import { IconName, Icon, Calendar } from '@/presentation/components'
 import React from 'react'
 
 type Props = {
@@ -13,17 +13,7 @@ const SurveyItem: React.FC<Props> = ({ survey }: Props) => {
     <li className={Styles.surveyItemWrap}>
       <div className={Styles.surveyContent}>
         <Icon className={Styles.iconWrap} iconName={iconName} />
-        <time>
-          <span data-testid="day" className={Styles.day}>
-            {survey.date.getDate().toString().padStart(2, '0')}
-          </span>
-          <span data-testid="month" className={Styles.month}>
-            {survey.date.toLocaleString('pt-BR', { month: 'short' }).replace('.', '')}
-          </span>
-          <span data-testid="year" className={Styles.year}>
-            {survey.date.getFullYear()}
-          </span>
-        </time>
+        <Calendar date={survey.date} className={Styles.calendarWrap} />
         <p data-testid="question">{survey.question}</p>
       </div>
       <footer>Ver Resultado</footer>
