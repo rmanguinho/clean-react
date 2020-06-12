@@ -51,6 +51,7 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Clean Architecture
 * DDD
 * Reactive Programming
+* Responsive Layout
 * Conventional Commits
 * GitFlow
 * Modular Design
