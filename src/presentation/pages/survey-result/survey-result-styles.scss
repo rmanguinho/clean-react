@@ -1,11 +1,12 @@
 @import "../../styles/colors.scss";
+@import "../../styles/animations.scss";
 
 .surveyResultWrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  background-color: $disabledBackground;
+  background-color: $background;
 
   .contentWrap {
     display: flex;
@@ -15,6 +16,47 @@
     width: 100%;
     flex-grow: 1;
     padding: 40px;
+
+    &:empty {
+      position: relative;
+      background-repeat: no-repeat;
+      background-image:
+        linear-gradient(to right, $disabledBackground, $disabledBackground),
+        linear-gradient(to right, $disabledBackground, $disabledBackground),
+        linear-gradient(to right, $disabledBackground, $disabledBackground),
+        linear-gradient(to right, $disabledBackground, $disabledBackground),
+        linear-gradient(to right, $disabledBackground, $disabledBackground),
+        linear-gradient(to right, $disabledBackground, $disabledBackground),
+        linear-gradient(to right, $disabledBackground, $disabledBackground);
+      background-position:
+        40px 40px,
+        136px 50px,
+        136px 80px,
+        136px 110px,
+        40px 172px,
+        40px 270px,
+        40px 372px;
+      background-size:
+        80px 100px,
+        calc(70% - 176px) 20px,
+        calc(100% - 176px) 20px,
+        calc(80% - 176px) 20px,
+        calc(100% - 80px) 82px,
+        calc(100% - 80px) 82px,
+        calc(100% - 80px) 82px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background-image: linear-gradient(to right, transparent, rgba($white, 0.2), transparent);
+        animation: shimmer 1.2s infinite;
+      }
+    }
 
     hgroup {
       display: flex;
@@ -73,6 +115,58 @@
 
     button {
       margin-top: 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .surveyResultWrap {
+    .contentWrap {
+      &:empty {
+        background-position:
+          40px 40px,
+          116px 50px,
+          116px 80px,
+          116px 110px,
+          40px 172px,
+          40px 264px,
+          40px 352px;
+        background-size:
+          60px 100px,
+          calc(70% - 176px) 20px,
+          calc(100% - 176px) 20px,
+          calc(80% - 176px) 20px,
+          calc(100% - 80px) 72px,
+          calc(100% - 80px) 72px,
+          calc(100% - 80px) 72px;
+      }
+  
+      hgroup {
+        h2 {
+          font-size: 20px;
+        }
+  
+        .calendarWrap {
+          width: 60px;
+        }
+      }
+  
+      .answersList {
+        li {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+  
+          .answer {
+            font-size: 16px;
+          }
+  
+          .percent {
+            font-size: 20px;
+          }
+        }
+      }
     }
   }
 }
