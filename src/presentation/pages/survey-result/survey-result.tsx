@@ -49,8 +49,8 @@ const SurveyResult: React.FC<Props> = ({ loadSurveyResult }: Props) => {
             <button>Voltar</button>
           </>
         }
-        { state.isLoading && <Loading /> }
-        { state.error && <Error error={state.error} reload={reload} /> }
+        {state.isLoading && <Loading />}
+        {state.error && <Error error={state.error} reload={reload} />}
       </div>
       <Footer />
     </div>
