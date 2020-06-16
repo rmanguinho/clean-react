@@ -1,0 +1,16 @@
+{
+  "question": "Question 1",
+  "date": "2018-02-03T00:00:00",
+  "answers": [{
+    "image": "any_image",
+    "answer": "any_answer",
+    "count": 2,
+    "percent": 70,
+    "isCurrentAccountAnswer": true
+  }, {
+    "answer": "any_answer_2",
+    "count": 1,
+    "percent": 30,
+    "isCurrentAccountAnswer": false
+  }]
+}
