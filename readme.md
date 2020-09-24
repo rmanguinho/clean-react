@@ -15,7 +15,7 @@
 
 Essa sistema faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
 
-O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando os novos Hooks, com uma arquitetura bem definida e desacoplada, utilizando TDD (programação orientada a testes) como metodologia de trabalho, Clean Architecture para fazer a distribuição de responsabilidades em camadas, sempre seguindo os princípios do SOLID, DRY, YAGNI, KISS e aplicando Design Patterns para resolver alguns problemas comuns.
+O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando os novos Hooks, Recoil, com uma arquitetura bem definida e desacoplada, utilizando TDD (programação orientada a testes) como metodologia de trabalho, Clean Architecture para fazer a distribuição de responsabilidades em camadas, sempre seguindo os princípios do SOLID, DRY, YAGNI, KISS e aplicando Design Patterns para resolver alguns problemas comuns.
 
 ## [**Link para a documentação da API**](http://fordevs.herokuapp.com/api-docs)
 
@@ -40,7 +40,6 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * Composite
 * Decorator
 * Dependency Injection
-* Abstract Server
 * Composition Root
 * Builder
 * Proxy
@@ -65,6 +64,7 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 
 * Typescript
 * React
+* Recoil
 * React Testing Library
 * React Router DOM
 * Cypress
@@ -93,6 +93,9 @@ O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando
 * UseRef
 * UseParams
 * Custom Hooks
+* UseRecoilState
+* UseResetRecoilState
+* Atom
 * Router
 * Memo
 
