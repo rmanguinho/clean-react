@@ -1,6 +1,6 @@
 {
   "name": "clean-react",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "NodeJs Rest API using TDD, Clean Architecture and Typescript",
   "author": "Rodrigo Manguinho",
   "homepage": "https://fordevs-react.herokuapp.com",
