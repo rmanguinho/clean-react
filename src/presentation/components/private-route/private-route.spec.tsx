@@ -1,5 +1,6 @@
 import { PrivateRoute, currentAccountState } from '@/presentation/components'
 import { mockAccountModel } from '@/domain/test'
+
 import { render } from '@testing-library/react'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory, MemoryHistory } from 'history'
@@ -26,11 +27,13 @@ const makeSut = (account = mockAccountModel()): SutTypes => {
 describe('PrivateRoute', () => {
   test('Should redirect to /login if token is empty', () => {
     const { history } = makeSut(null)
+
     expect(history.location.pathname).toBe('/login')
   })
 
   test('Should render current component if token is not empty', () => {
     const { history } = makeSut()
+
     expect(history.location.pathname).toBe('/')
   })
 })

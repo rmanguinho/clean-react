@@ -1,6 +1,7 @@
 import Styles from './header-styles.scss'
 import { Logo, currentAccountState } from '@/presentation/components'
 import { useLogout } from '@/presentation/hooks'
+
 import { useRecoilValue } from 'recoil'
 import React, { memo } from 'react'
 

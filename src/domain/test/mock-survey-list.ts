@@ -1,4 +1,5 @@
 import { LoadSurveyList } from '@/domain/usecases'
+
 import faker from 'faker'
 
 export const mockSurveyModel = (): LoadSurveyList.Model => ({

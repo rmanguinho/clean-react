@@ -1,4 +1,5 @@
 import Styles from './icon-styles.scss'
+
 import React from 'react'
 
 export enum IconName {

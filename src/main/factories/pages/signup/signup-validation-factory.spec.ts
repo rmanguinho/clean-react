@@ -4,6 +4,7 @@ import { ValidationComposite, RequiredFieldValidation, MinLengthValidation, Emai
 describe('SignUpValidationFactory', () => {
   test('Should make ValidationComposite with correct validations', () => {
     const composite = makeSignUpValidation()
+
     expect(composite).toEqual(ValidationComposite.build([
       new RequiredFieldValidation('name'),
       new MinLengthValidation('name', 5),

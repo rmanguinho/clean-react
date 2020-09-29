@@ -1,4 +1,5 @@
 import { LoadSurveyResult } from '@/domain/usecases'
+
 import { atom } from 'recoil'
 
 export const surveyResultState = atom({

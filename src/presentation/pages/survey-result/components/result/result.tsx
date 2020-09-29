@@ -2,6 +2,7 @@ import Styles from './result-styles.scss'
 import { Calendar } from '@/presentation/components'
 import { SurveyResultAnswer } from '@/presentation/pages/survey-result/components'
 import { LoadSurveyResult } from '@/domain/usecases'
+
 import { useHistory } from 'react-router-dom'
 import React from 'react'
 

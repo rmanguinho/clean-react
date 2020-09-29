@@ -3,6 +3,7 @@ import { currentAccountState } from '@/presentation/components'
 import { AccountModel } from '@/domain/models'
 import { LoadSurveyListSpy, mockAccountModel } from '@/domain/test'
 import { UnexpectedError, AccessDeniedError } from '@/domain/errors'
+
 import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import { createMemoryHistory, MemoryHistory } from 'history'
 import { Router } from 'react-router-dom'
@@ -37,6 +38,7 @@ describe('SurveyList Component', () => {
   test('Should present 4 empty items on start', async () => {
     makeSut()
     const surveyList = screen.getByTestId('survey-list')
+
     expect(surveyList.querySelectorAll('li:empty')).toHaveLength(4)
     expect(screen.queryByTestId('error')).not.toBeInTheDocument()
     await waitFor(() => surveyList)
@@ -44,6 +46,7 @@ describe('SurveyList Component', () => {
 
   test('Should call LoadSurveyList', async () => {
     const { loadSurveyListSpy } = makeSut()
+
     expect(loadSurveyListSpy.callsCount).toBe(1)
     await waitFor(() => screen.getByRole('heading'))
   })
@@ -52,6 +55,7 @@ describe('SurveyList Component', () => {
     makeSut()
     const surveyList = screen.getByTestId('survey-list')
     await waitFor(() => surveyList)
+
     expect(surveyList.querySelectorAll('li.surveyItemWrap')).toHaveLength(3)
     expect(screen.queryByTestId('error')).not.toBeInTheDocument()
   })
@@ -62,6 +66,7 @@ describe('SurveyList Component', () => {
     jest.spyOn(loadSurveyListSpy, 'loadAll').mockRejectedValueOnce(error)
     makeSut(loadSurveyListSpy)
     await waitFor(() => screen.getByRole('heading'))
+
     expect(screen.queryByTestId('survey-list')).not.toBeInTheDocument()
     expect(screen.getByTestId('error')).toHaveTextContent(error.message)
   })
@@ -71,6 +76,7 @@ describe('SurveyList Component', () => {
     jest.spyOn(loadSurveyListSpy, 'loadAll').mockRejectedValueOnce(new AccessDeniedError())
     const { setCurrentAccountMock, history } = makeSut(loadSurveyListSpy)
     await waitFor(() => screen.getByRole('heading'))
+
     expect(setCurrentAccountMock).toHaveBeenCalledWith(undefined)
     expect(history.location.pathname).toBe('/login')
   })
@@ -80,7 +86,9 @@ describe('SurveyList Component', () => {
     jest.spyOn(loadSurveyListSpy, 'loadAll').mockRejectedValueOnce(new UnexpectedError())
     makeSut(loadSurveyListSpy)
     await waitFor(() => screen.getByRole('heading'))
+
     fireEvent.click(screen.getByTestId('reload'))
+
     expect(loadSurveyListSpy.callsCount).toBe(1)
     await waitFor(() => screen.getByRole('heading'))
   })

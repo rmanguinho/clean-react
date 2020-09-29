@@ -3,6 +3,7 @@ import { signUpState, Input, SubmitButton, FormStatus } from './components'
 import { Footer, LoginHeader, currentAccountState } from '@/presentation/components'
 import { Validation } from '@/presentation/protocols'
 import { AddAccount } from '@/domain/usecases'
+
 import { useHistory, Link } from 'react-router-dom'
 import { useRecoilState, useRecoilValue, useResetRecoilState } from 'recoil'
 import React, { useEffect } from 'react'

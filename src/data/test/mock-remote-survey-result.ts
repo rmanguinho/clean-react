@@ -1,4 +1,5 @@
 import { RemoteLoadSurveyResult } from '@/data/usecases'
+
 import faker from 'faker'
 
 export const mockRemoteSurveyResultModel = (): RemoteLoadSurveyResult.Model => ({

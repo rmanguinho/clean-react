@@ -1,6 +1,7 @@
 import { Header, currentAccountState } from '@/presentation/components'
 import { AccountModel } from '@/domain/models'
 import { mockAccountModel } from '@/domain/test'
+
 import { render, fireEvent, screen } from '@testing-library/react'
 import { Router } from 'react-router-dom'
 import { createMemoryHistory, MemoryHistory } from 'history'
@@ -32,7 +33,9 @@ const makeSut = (account = mockAccountModel()): SutTypes => {
 describe('Header Component', () => {
   test('Should call setCurrentAccount with null', () => {
     const { history, setCurrentAccountMock } = makeSut()
+
     fireEvent.click(screen.getByTestId('logout'))
+
     expect(setCurrentAccountMock).toHaveBeenCalledWith(undefined)
     expect(history.location.pathname).toBe('/login')
   })
@@ -40,6 +43,7 @@ describe('Header Component', () => {
   test('Should render username correctly', () => {
     const account = mockAccountModel()
     makeSut(account)
+
     expect(screen.getByTestId('username')).toHaveTextContent(account.name)
   })
 })
