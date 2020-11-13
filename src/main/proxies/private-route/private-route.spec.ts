@@ -1,4 +1,4 @@
-import { PrivateRoute } from '@/presentation/components'
+import { PrivateRoute } from '@/main/proxies'
 import { renderWithHistory } from '@/presentation/test'
 import { mockAccountModel } from '@/domain/test'
 
