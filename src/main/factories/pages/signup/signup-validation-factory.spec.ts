@@ -1,5 +1,6 @@
 import { makeSignUpValidation } from '@/main/factories/pages'
-import { ValidationComposite, RequiredFieldValidation, MinLengthValidation, EmailValidation, CompareFieldsValidation } from '@/validation/validators'
+import { ValidationComposite } from '@/main/composites'
+import { RequiredFieldValidation, MinLengthValidation, EmailValidation, CompareFieldsValidation } from '@/validation/validators'
 
 describe('SignUpValidationFactory', () => {
   test('Should make ValidationComposite with correct validations', () => {
