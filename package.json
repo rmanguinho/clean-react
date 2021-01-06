@@ -69,7 +69,7 @@
     "webpack-merge": "^5.1.4"
   },
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "express-history-api-fallback": "^2.2.1",
     "react": "^16.13.1",
