@@ -16,6 +16,12 @@
 Essa sistema faz parte do treinamento do professor Rodrigo Manguinho (Mango) na Udemy.
 
 O objetivo do treinamento é mostrar como criar um sistema em ReactJs utilizando os novos Hooks, Recoil, com uma arquitetura bem definida e desacoplada, utilizando TDD (programação orientada a testes) como metodologia de trabalho, Clean Architecture para fazer a distribuição de responsabilidades em camadas, sempre seguindo os princípios do SOLID, DRY, YAGNI, KISS e aplicando Design Patterns para resolver alguns problemas comuns.
+<br /><br />
+
+## Contribua com esse Projeto <3
+<a href='https://ko-fi.com/M4M265FO6' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+<br />
 
 ## [**Link para a documentação da API**](http://fordevs.herokuapp.com/api-docs)
 
