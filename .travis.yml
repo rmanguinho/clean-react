@@ -9,7 +9,7 @@ cache:
   directories:
     - ~/.cache
 script:
-  - eslint 'src/**'
+  - npm run lint
   - npm run test:coveralls
   - npm run test:cypress:ci
 deploy:

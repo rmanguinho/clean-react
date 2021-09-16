@@ -1,1 +1,1 @@
-export * from './validation-composite/validation-composite'
+export * from './validation-composite'
