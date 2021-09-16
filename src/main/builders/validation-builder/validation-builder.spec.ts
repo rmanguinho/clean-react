@@ -22,7 +22,7 @@ describe('ValidationBuilder', () => {
 
   test('Should return MinLengthValidation', () => {
     const field = faker.database.column()
-    const length = faker.random.number()
+    const length = faker.datatype.number()
 
     const validations = sut.field(field).min(length).build()
 
@@ -40,7 +40,7 @@ describe('ValidationBuilder', () => {
 
   test('Should return a list of validations', () => {
     const field = faker.database.column()
-    const length = faker.random.number()
+    const length = faker.datatype.number()
 
     const validations = sut.field(field).required().min(length).email().build()
 

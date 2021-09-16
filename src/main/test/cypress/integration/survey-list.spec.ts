@@ -1,10 +1,10 @@
 import * as Helper from '../utils/helpers'
 import * as Http from '../utils/http-mocks'
 
-const path = /surveys/
+const path = /api\/surveys/
 const mockUnexpectedError = (): void => Http.mockServerError(path, 'GET')
 const mockAccessDeniedError = (): void => Http.mockForbiddenError(path, 'GET')
-const mockSuccess = (): void => Http.mockOk(path, 'GET', 'fx:survey-list')
+const mockSuccess = (): void => Http.mockOk(path, 'GET', 'survey-list')
 
 describe('SurveyList', () => {
   beforeEach(() => {
@@ -44,8 +44,9 @@ describe('SurveyList', () => {
   it('Should logout on logout link click', () => {
     mockUnexpectedError()
     cy.visit('')
-    cy.getByTestId('logout').click()
-    Helper.testUrl('/login')
+    cy.getByTestId('logout').click().then(() => {
+      Helper.testUrl('/login')
+    })
   })
 
   it('Should present survey items', () => {

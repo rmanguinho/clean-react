@@ -1,8 +1,8 @@
 import * as Helper from '../utils/helpers'
 import * as Http from '../utils/http-mocks'
 
-const path = /surveys/
-const mockLoadSuccess = (): void => Http.mockOk(path, 'GET', 'fx:load-survey-result')
+const path = /api\/surveys/
+const mockLoadSuccess = (): void => Http.mockOk(path, 'GET', 'load-survey-result')
 
 describe('SurveyResult', () => {
   describe('load', () => {
@@ -67,7 +67,7 @@ describe('SurveyResult', () => {
   describe('save', () => {
     const mockUnexpectedError = (): void => Http.mockServerError(path, 'PUT')
     const mockAccessDeniedError = (): void => Http.mockForbiddenError(path, 'PUT')
-    const mockSaveSuccess = (): void => Http.mockOk(path, 'PUT', 'fx:save-survey-result')
+    const mockSaveSuccess = (): void => Http.mockOk(path, 'PUT', 'save-survey-result')
 
     beforeEach(() => {
       cy.fixture('account').then(account => {

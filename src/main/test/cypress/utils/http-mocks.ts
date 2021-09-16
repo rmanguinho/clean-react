@@ -1,47 +1,47 @@
 import faker from 'faker'
 
 export const mockUnauthorizedError = (url: RegExp): void => {
-  cy.server()
-  cy.route({
+  cy.intercept({
     method: 'POST',
-    url,
-    status: 401,
-    response: {
+    url
+  }, {
+    statusCode: 401,
+    body: {
       error: faker.random.words()
     }
   }).as('request')
 }
 
 export const mockForbiddenError = (url: RegExp, method: string): void => {
-  cy.server()
-  cy.route({
+  cy.intercept({
     method,
-    url,
-    status: 403,
-    response: {
+    url
+  }, {
+    statusCode: 403,
+    body: {
       error: faker.random.words()
     }
   }).as('request')
 }
 
 export const mockServerError = (url: RegExp, method: string): void => {
-  cy.server()
-  cy.route({
+  cy.intercept({
     method,
-    url,
-    status: faker.helpers.randomize([400, 404, 500]),
-    response: {
+    url
+  }, {
+    statusCode: faker.helpers.randomize([400, 404, 500]),
+    body: {
       error: faker.random.words()
     }
   }).as('request')
 }
 
-export const mockOk = (url: RegExp, method: string, response: any): void => {
-  cy.server()
-  cy.route({
+export const mockOk = (url: RegExp, method: string, fixture: string, alias: string = 'request'): void => {
+  cy.intercept({
     method,
-    url,
-    status: 200,
-    response
-  }).as('request')
+    url
+  }, {
+    statusCode: 200,
+    fixture
+  }).as(alias)
 }
